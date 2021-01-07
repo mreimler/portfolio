@@ -15,7 +15,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #fde9e0;
+  --clr-accent: #faf1e8;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -65,6 +65,16 @@ strong {
 :focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
+}
+
+a {
+  color: var(--clr-accent);
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
 }
 
 /* Buttons */
@@ -400,8 +410,8 @@ header {
 }
 
 .portfolio__img {
-  height: 380px !important;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   -webkit-column-count: 3;
   -webkit-column-gap: 0px;
   -moz-column-count: 3;
