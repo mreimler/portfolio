@@ -1,110 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marina Reimler Portfolio Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="drumkit.css" />
+</head>
+
+<body>
     <header>
-      <!--<div class="logo">
+        <!--<div class="logo">
         <img src="#" alt="" />
       </div>-->
 
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#services" class="nav__link">My Services</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#about" class="nav__link">About me</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#work" class="nav__link">My Work</a>
-          </li>
-        </ul>
-      </nav>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#services" class="nav__link">My Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#about" class="nav__link">About me</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#work" class="nav__link">My Work</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <section class="intro">
-      <h1 class="section__title section__title--intro">
-        Javascript <strong>drumkit</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">play keyboard drums!</p>
-      <img src="img/drumkit-js.jpg" alt="small screenshot of project website" class="intro__img" />
+        <h1 class="section__title section__title--intro">
+            Javascript <strong>drumkit</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">play keyboard drums!</p>
+        <img src="img/music-learning.jpg" alt="small screenshot of project website" class="intro__img" />
     </section>
-
     <div class="portfolio-item-individual">
-      <p>
-        Find this project's code here on Github: <a href="https://github.com/mreimler/drumkit" target="_blank">https://github.com/mreimler/drumkit</a>
-      </p>
-      <img src="img/drumkit-js.jpg" alt="large screenshot of project website" />
-      <!-- <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-        similique explicabo minima commodi a tempore ducimus iusto eveniet.
-        Perferendis, accusantium?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex saepe ab
-        labore. Debitis voluptatem quod, ullam ab amet similique in!
-      </p> -->
+        <div class="project">
+            <div class=keys>
+                <div data-key="65" class="key">
+                    <kbd>A</kbd>
+                    <span class="sound">clap</span>
+                </div>
+                <div data-key="83" class="key">
+                    <kbd>S</kbd>
+                    <span class="sound">hihat</span>
+                </div>
+                <div data-key="68" class="key">
+                    <kbd>D</kbd>
+                    <span class="sound">kick</span>
+                </div>
+                <div data-key="70" class="key">
+                    <kbd>F</kbd>
+                    <span class="sound">openhat</span>
+                </div>
+                <div data-key="71" class="key">
+                    <kbd>G</kbd>
+                    <span class="sound">boom</span>
+                </div>
+                <div data-key="72" class="key">
+                    <kbd>H</kbd>
+                    <span class="sound">ride</span>
+                </div>
+                <div data-key="74" class="key">
+                    <kbd>J</kbd>
+                    <span class="sound">snare</span>
+                </div>
+                <div data-key="75" class="key">
+                    <kbd>K</kbd>
+                    <span class="sound">tom</span>
+                </div>
+                <div data-key="76" class="key">
+                    <kbd>L</kbd>
+                    <span class="sound">tink</span>
+                </div>
+            </div>
+            
+        </div>
+        <p>Find this project's code here on Github: <a href="https://github.com/mreimler/drumkit"
+                target="_blank">https://github.com/mreimler/drumkit</a>
+        </p>
+    </div>
+        
+        <audio data-key="65" src="sounds/clap.wav"></audio>
+        <audio data-key="83" src="sounds/hihat.wav"></audio>
+        <audio data-key="68" src="sounds/kick.wav"></audio>
+        <audio data-key="70" src="sounds/openhat.wav"></audio>
+        <audio data-key="71" src="sounds/boom.wav"></audio>
+        <audio data-key="72" src="sounds/ride.wav"></audio>
+        <audio data-key="74" src="sounds/snare.wav"></audio>
+        <audio data-key="75" src="sounds/tom.wav"></audio>
+        <audio data-key="76" src="sounds/tink.wav"></audio>
+        
+        <script>
+            window.addEventListener('keydown', function (e) {
+                const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+                const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+                if (!audio) return;
+                audio.currentTime = 0;
+                audio.play();
+
+                key.classList.add('playing');
+
+            });
+
+            function removeTransition(e) {
+                if (e.propertyName !== 'transform') return;
+                this.classList.remove('playing');
+            }
+
+            const keys = document.querySelectorAll('.key');
+            keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+        </script>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-      <a href="mailto:marina@reimler.de" class="footer__link"
-        >marina@reimler.de</a
-      >
-      <ul class="social-list">
-        <!--<li class="social-list__item">
+        <a href="mailto:marina@reimler.de" class="footer__link">marina@reimler.de</a>
+        <ul class="social-list">
+            <!--<li class="social-list__item">
           <a
             class="social-list__link"
             href="https://www.instagram.com/marinareimler/"
             ><i class="fab fa-instagram"></i
           ></a>
         </li>-->
-        <li class="social-list__item">
-          <a
-            class="social-list__link"
-            href="https://www.linkedin.com/in/marina-reimler/"
-            target="_blank"><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://github.com/mreimler"
-          target="_blank"><i class="fab fa-github-square"></i
-          ></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://twitter.com/marinareimler"
-          target="_blank"><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-      </ul>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/marina-reimler/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/mreimler" target="_blank"><i
+                        class="fab fa-github-square"></i></a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com/marinareimler" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+            </li>
+        </ul>
     </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
