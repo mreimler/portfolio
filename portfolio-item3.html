@@ -19,7 +19,10 @@
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="quotes.css" />
   </head>
   <body>
     <header>
@@ -53,14 +56,49 @@
         Quote <strong>machine</strong>
       </h1>
       <p class="section__subtitle section__subtitle--intro">tweet random quotes</p>
-      <img src="img/quote-machine.jpg" alt="small screenshot of project website" class="intro__img" />
+      <img src="img/quotes.jpg" alt="small screenshot of project website" class="intro__img" />
     </section>
 
     <div class="portfolio-item-individual">
+      
+      <div id="quote-box">
+        <div id="text"></div>
+      
+        <div id="author"></div>
+      
+        <span id="button-box">
+          <a id="tweet-quote" href="https://twitter.com/intent/tweet" data-text="custom share text" target="blank"> <i
+              class="fa fa-twitter randomBgColor" aria-hidden="true"></i></a>
+      
+          <button id="new-quote">New Quote</button>
+        </span>
+      </div>
+      <script>var newQuote = function () {
+
+          var request = new XMLHttpRequest()
+
+          request.open('GET', 'https://type.fit/api/quotes', true)
+
+
+
+          request.onload = function () {
+            //accessing JSON data
+            var data = JSON.parse(this.response);
+            //append random to DOM
+            var randomNum = Math.floor(Math.random() * (data.length - 1))
+            document.getElementById('text').textContent = data[randomNum].text
+            document.getElementById('author').textContent = data[randomNum].author
+
+            document.querySelector('#tweet-quote').setAttribute('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + data[randomNum].text + '" ' + data[randomNum].author));
+          };
+
+          request.send()
+        }
+        document.getElementById('new-quote').onclick = newQuote;
+        newQuote();</script>
       <p>
         Find this project's code here on Github: <a href="https://github.com/mreimler/quote-machine.git" target="_blank">https://github.com/mreimler/quote-machine.git</a>
       </p>
-      <img src="img/quote-machine.jpg" alt="large screenshot of project website" />
       <!-- <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
         similique explicabo minima commodi a tempore ducimus iusto eveniet.
